@@ -11,10 +11,13 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -263,6 +266,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         AlertDialog dialo= builder.create();
+        Window window=dialo.getWindow();
+        WindowManager.LayoutParams layoyt=window.getAttributes();
+        layoyt.gravity= Gravity.BOTTOM;
+        window.setAttributes(layoyt);
         dialo.show();
 
     }
