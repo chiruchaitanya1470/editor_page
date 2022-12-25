@@ -174,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
                     layout.removeView(imageview1);
                     imageView();
                 };
-
             }
 
             @Override
@@ -210,9 +209,6 @@ public class MainActivity extends AppCompatActivity {
                 x=x+50;
                 Log.d("left : ","right after : "+x);
                 textxcoordinate.setText(Integer.toString(x));
-
-
-
             }
         });
         up.setOnClickListener(new View.OnClickListener() {
@@ -264,10 +260,6 @@ public class MainActivity extends AppCompatActivity {
 
                          x=Integer.parseInt(textxcoordinate.getText().toString());
                          y=Integer.parseInt(textycoordinate.getText().toString());
-
-
-
-
                     }
                 });
         AlertDialog dialo= builder.create();
